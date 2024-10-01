@@ -1,0 +1,11 @@
+@import "variables";
+
+.card-button {
+    font-size: 16px;
+    text-align: center;
+    margin-top: 10px;
+    border-radius: $defaultRadius;
+    background-color: rgb(69, 156, 214);
+    cursor: pointer;
+    padding: 10px;
+}
