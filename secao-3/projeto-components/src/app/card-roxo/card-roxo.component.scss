@@ -1,9 +1,10 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,400;0,600;0,800;1,100&family=Roboto+Mono:wght@100&display=swap');
+@import "variables";
 
 .card-roxo {
     max-width: 350px;
-    background-color: #ede1ff;
-    border-radius: 25px;
+    background-color: rgb(202, 119, 235);
+    border-radius: $defaultRadius;
     padding: 30px;
     font-family: 'Poppins', sans-serif;
 
