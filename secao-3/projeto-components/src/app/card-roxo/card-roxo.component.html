@@ -1,6 +1,6 @@
 <div class="card-roxo">
-    <div class="card-roxo__plan card-roxo__item">Plano <b>Completo</b></div>
-    <div class="card-roxo__price card-roxo__item">R$250,00/Mês</div>
-    <app-card-button></app-card-button>
+    <div class="card-roxo__plan card-roxo__item">Plano <b>{{ plano.infos.tipo }}</b></div>
+    <div class="card-roxo__price card-roxo__item">R${{ plano.infos.preco }},00/Mês</div>
+    <app-card-button class="card-roxo__button"></app-card-button>
     <app-card-button-cancel></app-card-button-cancel>
 </div>

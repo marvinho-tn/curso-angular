@@ -21,3 +21,7 @@
         font-size: 40px;
     }
 }
+
+:host ::ng-deep .card-button {
+    background-color: rgb(11, 125, 233) !important;
+}

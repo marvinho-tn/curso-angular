@@ -1,10 +1,10 @@
 import { Component } from '@angular/core';
 
-interface IPlano {
-  infos: IInfos;
+interface ICard {
+  infos: ICardInfos;
 }
 
-interface IInfos {
+interface ICardInfos {
   tipo: string;
   preco: number;
 }
@@ -15,7 +15,7 @@ interface IInfos {
   styleUrl: './card.component.scss',
 })
 export class CardComponent {
-  plano: IPlano = {
+  plano: ICard = {
     infos: {
       tipo: 'Simples',
       preco: 100,
