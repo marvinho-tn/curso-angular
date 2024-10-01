@@ -6,9 +6,7 @@ interface IButtonInfos {
 
 @Component({
   selector: 'app-card-button',
-  template: `
-    <div class="card-button"><b>{{ infos.nome }}</b></div>
-  `,
+  templateUrl: './card-button.component.html',
   styleUrl: './card-button.component.scss',
 })
 export class CardButtonComponent {
