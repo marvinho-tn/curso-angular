@@ -12,14 +12,14 @@ interface ICardInfo {
 export class CardComponent {
   @Input({ required: true }) price: number = 0;
   @Input({ required: true }) type: string = '';
-  @Output('buttonClick') buttonClickEmitter = new EventEmitter<string>();
+  @Output('buttonClick') buttonClickEmitter = new EventEmitter();
 
   info: ICardInfo = {
     backgroundColor: this._generateRGB(),
   };
 
   add() {
-    this.buttonClickEmitter.emit(this.type);
+    this.buttonClickEmitter.emit({ type: this.type, price: this.price });
   }
 
   defineFontColor(backgroundRgb: string) {

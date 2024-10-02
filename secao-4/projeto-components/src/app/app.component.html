@@ -1,28 +1,29 @@
 <div class="cards-container">
     <div class="cards-container__cards">
-        <app-card class="cards-container__card-item" (buttonClick)="addToCart($event)" type="Básico" [price]="100"/>
-        <app-card class="cards-container__card-item" (buttonClick)="addToCart($event)" type="Intermediário" [price]="250"/>
-        <app-card class="cards-container__card-item" (buttonClick)="addToCart($event)" type="Avançado" [price]="400"/>
-        <app-card class="cards-container__card-item" (buttonClick)="addToCart($event)" type="Premium" [price]="600"/>
-        <app-card class="cards-container__card-item" (buttonClick)="addToCart($event)" type="Familia" [price]="350"/>
-        <app-card class="cards-container__card-item" (buttonClick)="addToCart($event)" type="Estudante" [price]="150"/>
-        <app-card class="cards-container__card-item" (buttonClick)="addToCart($event)" type="Profissional" [price]="700"/>
-        <app-card class="cards-container__card-item" (buttonClick)="addToCart($event)" type="Empresarial" [price]="1000"/>
-        <app-card class="cards-container__card-item" (buttonClick)="addToCart($event)" type="Gold" [price]="800"/>
-        <app-card class="cards-container__card-item" (buttonClick)="addToCart($event)" type="Silver" [price]="500"/>
-        <app-card class="cards-container__card-item" (buttonClick)="addToCart($event)" type="Platinum" [price]="1200"/>
-        <app-card class="cards-container__card-item" (buttonClick)="addToCart($event)" type="Starter" [price]="75"/>
-        <app-card class="cards-container__card-item" (buttonClick)="addToCart($event)" type="Deluxe" [price]="900"/>
-        <app-card class="cards-container__card-item" (buttonClick)="addToCart($event)" type="Lite" [price]="200"/>
-        <app-card class="cards-container__card-item" (buttonClick)="addToCart($event)" type="VIP" [price]="1100"/>
-        <app-card class="cards-container__card-item" (buttonClick)="addToCart($event)" type="Max" [price]="1300"/>
-        <app-card class="cards-container__card-item" (buttonClick)="addToCart($event)" type="Cloud" [price]="450"/>
-        <app-card class="cards-container__card-item" (buttonClick)="addToCart($event)" type="Sazonal" [price]="300"/>
-        <app-card class="cards-container__card-item" (buttonClick)="addToCart($event)" type="Individual" [price]="250"/>
-        <app-card class="cards-container__card-item" (buttonClick)="addToCart($event)" type="Anual" [price]="1500"/>
+        <app-card class="cards-container__card" (buttonClick)="addToCart($event)" type="Básico" [price]="100"/>
+        <app-card class="cards-container__card" (buttonClick)="addToCart($event)" type="Intermediário" [price]="250"/>
+        <app-card class="cards-container__card" (buttonClick)="addToCart($event)" type="Avançado" [price]="400"/>
+        <app-card class="cards-container__card" (buttonClick)="addToCart($event)" type="Premium" [price]="600"/>
+        <app-card class="cards-container__card" (buttonClick)="addToCart($event)" type="Familia" [price]="350"/>
+        <app-card class="cards-container__card" (buttonClick)="addToCart($event)" type="Estudante" [price]="150"/>
+        <app-card class="cards-container__card" (buttonClick)="addToCart($event)" type="Profissional" [price]="700"/>
+        <app-card class="cards-container__card" (buttonClick)="addToCart($event)" type="Empresarial" [price]="1000"/>
+        <app-card class="cards-container__card" (buttonClick)="addToCart($event)" type="Gold" [price]="800"/>
+        <app-card class="cards-container__card" (buttonClick)="addToCart($event)" type="Silver" [price]="500"/>
+        <app-card class="cards-container__card" (buttonClick)="addToCart($event)" type="Platinum" [price]="1200"/>
+        <app-card class="cards-container__card" (buttonClick)="addToCart($event)" type="Starter" [price]="75"/>
+        <app-card class="cards-container__card" (buttonClick)="addToCart($event)" type="Deluxe" [price]="900"/>
+        <app-card class="cards-container__card" (buttonClick)="addToCart($event)" type="Lite" [price]="200"/>
+        <app-card class="cards-container__card" (buttonClick)="addToCart($event)" type="VIP" [price]="1100"/>
+        <app-card class="cards-container__card" (buttonClick)="addToCart($event)" type="Max" [price]="1300"/>
+        <app-card class="cards-container__card" (buttonClick)="addToCart($event)" type="Cloud" [price]="450"/>
+        <app-card class="cards-container__card" (buttonClick)="addToCart($event)" type="Sazonal" [price]="300"/>
+        <app-card class="cards-container__card" (buttonClick)="addToCart($event)" type="Individual" [price]="250"/>
+        <app-card class="cards-container__card" (buttonClick)="addToCart($event)" type="Anual" [price]="1500"/>
     </div>  
     <div class="cards-container__cart">
         <p>Itens no Carrinho: <b>{{ cart.length }}</b></p>
-        <app-card-button color="rgb(255, 255, 255)" backgroundColor="rgb(255, 0, 214)" name="Ver Itens" (buttonClick)="showCart()"/>
+        <p>Valor total: <b>R${{ getCartPrice() }},00</b></p>
+        <app-card-button color="rgb(255, 255, 255)" backgroundColor="rgb(0, 0, 0)" name="Ver Itens" (buttonClick)="showCart()"/>
     </div>
 </div>
