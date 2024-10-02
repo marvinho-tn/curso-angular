@@ -15,6 +15,7 @@ import { MatSliderModule } from '@angular/material/slider';
   ],
   exports: [
     CardComponent,
+    CardButtonComponent,
   ],
 })
 export class CardsModule { }

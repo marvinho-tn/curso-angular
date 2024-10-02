@@ -1,4 +1,18 @@
 .cards-container {
-    display: flex;
-    justify-content: space-evenly;
+    &__cards {
+        display: flex;
+        padding: 30px;
+    }
+
+    &__card-item {
+        padding: 10px;
+    }
+
+    &__cart {
+        padding: 10px;
+        font-size: 40px;
+        flex: 1; 
+        align-self: flex-end;
+        text-align: left;
+    }
 }
