@@ -1,8 +1,4 @@
-import { Component } from '@angular/core';
-
-interface IButtonInfos {
-  nome: string;
-}
+import { Component, Input } from '@angular/core';
 
 @Component({
   selector: 'app-card-button',
@@ -10,7 +6,7 @@ interface IButtonInfos {
   styleUrl: './card-button.component.scss',
 })
 export class CardButtonComponent {
-  infos: IButtonInfos = {
-    nome: 'Comprar'
-  }
+  @Input({ required: true }) name: string = "";
+  @Input() backgroundColor: string = "white";
+  @Input() color: string = "black";
 }

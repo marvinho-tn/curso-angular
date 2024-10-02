@@ -1,4 +1,7 @@
-<div class="card" [style.background-color]="infos.backgroundColor" [style.color]="definirCorFonte(infos.backgroundColor)">
-    <h1 class="card__title">{{ infos.name }} {{ infos.type }} <b>({{ infos.currentYear }})</b></h1>
-    <app-card-button />
+<div class="card" [style.background-color]="info.backgroundColor" [style.color]="definirCorFonte(info.backgroundColor)">
+    <div class="card__plan card__item">Plano <b>{{ type }}</b></div>
+    <div class="card__price card__item">R${{ price }},00</div>
+
+    <app-card-button color="rgb(255, 255, 255)" backgroundColor="rgb(69, 156, 214)" name="Adicionar" />
+    <app-card-button color="rgb(255, 255, 255)" backgroundColor="rgb(255, 0, 0)" name="Ver" />
 </div>

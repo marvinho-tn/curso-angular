@@ -3,12 +3,20 @@
 
 .card {
     max-width: 350px;
-    background-color: rgb(202, 230, 139);
     border-radius: $defaultRadius;
     padding: 30px;
     font-family: 'Poppins', sans-serif;
 
-    &__title {
-        text-align: center;
+    &__item {
+        padding: 10px;
+    }
+
+    &__plan {
+        font-size: 22px;
+    }
+
+    &__price {
+        font-weight: 600;
+        font-size: 40px;
     }
 }
