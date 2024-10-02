@@ -6,5 +6,11 @@ import { Component } from '@angular/core';
   styleUrl: './app.component.scss'
 })
 export class AppComponent {
-  title = 'two_way_data_binding';
+  name: string = 'Marvin';
+
+  //usa a atribuição caso o two way data binding nao esteja ligado -> [(ngModel)]
+  handleInputChange(event: string) {
+    console.log(event);
+    //this.name = event;
+  }
 }
