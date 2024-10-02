@@ -1,4 +1,4 @@
-<div class="card">
-    <h1 class="card__title">{{ infos.name }} <b>({{ infos.currentYear }})</b></h1>
-    <app-card-input />
+<div class="card" [style.background-color]="infos.backgroundColor" [style.color]="definirCorFonte(infos.backgroundColor)">
+    <h1 class="card__title">{{ infos.name }} {{ infos.type }} <b>({{ infos.currentYear }})</b></h1>
+    <app-card-button />
 </div>

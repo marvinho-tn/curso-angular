@@ -11,6 +11,6 @@ interface IButtonInfos {
 })
 export class CardButtonComponent {
   infos: IButtonInfos = {
-    nome: 'Habilitar'
+    nome: 'Comprar'
   }
 }
