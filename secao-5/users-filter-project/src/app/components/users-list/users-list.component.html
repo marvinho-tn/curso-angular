@@ -16,7 +16,7 @@
         <!-- Coluna Status -->
         <ng-container matColumnDef="ativo">
             <th mat-header-cell *matHeaderCellDef> Status </th>
-            <td mat-cell *matCellDef="let element" class="users-list__item" (click)="onUserSelected(element)"> {{ element.ativo ? "Ativo" : "Inativo" }} </td>
+            <td mat-cell *matCellDef="let element" class="users-list__item" (click)="onUserSelected(element)"> {{ element.ativo | status }} </td>
         </ng-container>
 
         <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>

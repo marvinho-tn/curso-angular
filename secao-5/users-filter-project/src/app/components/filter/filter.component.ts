@@ -6,13 +6,13 @@ import { Component } from '@angular/core';
   styleUrl: './filter.component.scss'
 })
 export class FilterComponent {
-  foods = [
+  statusList = [
     {
-      value: 'arroz',
-      viewValue: 'Arroz'
+      value: true,
+      viewValue: 'Ativo'
     },
     {
-      value: 'feijao',
-      viewValue: 'Feijão'
+      value: false,
+      viewValue: 'Inativo'
     }];
 }
