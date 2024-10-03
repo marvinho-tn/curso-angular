@@ -16,24 +16,17 @@
         <mat-divider></mat-divider>
         <mat-list-item>
             <span class="mat-h2">Telefone: </span>
-            <span class="mat-h3">{{ user.telefone }}</span>
+            <span class="mat-h3">{{ user.telefone | phone }}</span>
         </mat-list-item>
         <mat-divider></mat-divider>
         <mat-list-item>
             <span class="mat-h2">Endereço: </span>
-            <span class="mat-h3">
-                {{ user.endereco?.rua }}, 
-                {{ user.endereco?.numero }}, 
-                {{ user.endereco?.cidade }} - 
-                {{ user.endereco?.estado }}
-            </span>
+            <span class="mat-h3">{{ user.endereco | address }}</span>
         </mat-list-item>
         <mat-divider></mat-divider>
         <mat-list-item>
             <span class="mat-h2">Ativo: </span>
-            <span class="mat-h3">
-                {{ user.ativo === undefined ? "" : user.ativo ? "Sim" : "Não" }}
-            </span>
+            <span class="mat-h3">{{ user.ativo | status }}</span>
         </mat-list-item>
         <mat-divider></mat-divider>
         <mat-list-item>
@@ -43,7 +36,7 @@
         <mat-divider></mat-divider>
         <mat-list-item>
             <span class="mat-h2">Data de Cadastro: </span>
-            <span class="mat-h3">{{ user.dataCadastro }}</span>
+            <span class="mat-h3">{{ user.dataCadastro | date }}</span>
         </mat-list-item>
         <mat-divider></mat-divider>
     </mat-list>
