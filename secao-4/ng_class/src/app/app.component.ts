@@ -6,5 +6,9 @@ import { Component } from '@angular/core';
   styleUrl: './app.component.scss'
 })
 export class AppComponent {
-  title = 'ng_class';
+  isGreen: boolean = true;
+
+  toggleIsGreen() {
+    this.isGreen = !this.isGreen;
+  }
 }
