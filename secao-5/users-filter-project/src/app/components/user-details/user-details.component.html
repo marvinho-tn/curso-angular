@@ -5,31 +5,45 @@
         </mat-list-item>
         <mat-divider></mat-divider>
         <mat-list-item>
-            <span class="mat-h2">Nome: </span><span class="mat-h3">Alice Ribeiro</span>
+            <span class="mat-h2">Nome: </span>
+            <span class="mat-h3">{{ user.nome }}</span>
         </mat-list-item>
         <mat-divider></mat-divider>
         <mat-list-item>
-            <span class="mat-h2">Email: </span><span class="mat-h3">alice.ribeiro&#64;example.com</span>
+            <span class="mat-h2">Email: </span>
+            <span class="mat-h3">{{ user.email }}</span>
         </mat-list-item>
         <mat-divider></mat-divider>
         <mat-list-item>
-            <span class="mat-h2">Telefone: </span><span class="mat-h3">(11) 98765-4321</span>
+            <span class="mat-h2">Telefone: </span>
+            <span class="mat-h3">{{ user.telefone }}</span>
         </mat-list-item>
         <mat-divider></mat-divider>
         <mat-list-item>
-            <span class="mat-h2">Endereço: </span><span class="mat-h3">Avenida das Flores, 350, São Paulo - SP</span>
+            <span class="mat-h2">Endereço: </span>
+            <span class="mat-h3">
+                {{ user.endereco?.rua }}, 
+                {{ user.endereco?.numero }}, 
+                {{ user.endereco?.cidade }} - 
+                {{ user.endereco?.estado }}
+            </span>
         </mat-list-item>
         <mat-divider></mat-divider>
         <mat-list-item>
-            <span class="mat-h2">Ativo: </span><span class="mat-h3">Sim</span>
+            <span class="mat-h2">Ativo: </span>
+            <span class="mat-h3">
+                {{ user.ativo === undefined ? "" : user.ativo ? "Sim" : "Não" }}
+            </span>
         </mat-list-item>
         <mat-divider></mat-divider>
         <mat-list-item>
-            <span class="mat-h2">Função: </span><span class="mat-h3">Designer Gráfico</span>
+            <span class="mat-h2">Função: </span>
+            <span class="mat-h3">{{ user.funcao }}</span>
         </mat-list-item>
         <mat-divider></mat-divider>
         <mat-list-item>
-            <span class="mat-h2">Data de Cadastro: </span><span class="mat-h3">10/09/2024</span>
+            <span class="mat-h2">Data de Cadastro: </span>
+            <span class="mat-h3">{{ user.dataCadastro }}</span>
         </mat-list-item>
         <mat-divider></mat-divider>
     </mat-list>
