@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { IUser } from './interfaces/user/user.interface';
 import { UsersList } from './data/users-list';
 import { IFilterOptions } from './interfaces/filter-options.interface';
+import { isWithinInterval } from 'date-fns';
 
 @Component({
   selector: 'app-root',
@@ -53,19 +54,19 @@ export class AppComponent implements OnInit {
   }
 
   filterUsersListByDate(startDate: Date | undefined, endDate: Date | undefined, usersList: IUser[]): IUser[] {
-    const START_DATE_TYPPED = startDate !== undefined;
-    const END_DATE_TYPPED = endDate !== undefined;
+    const DATES_NOT_SELECTED = startDate === undefined || endDate === undefined;
+
+    if(DATES_NOT_SELECTED) {
+      return usersList;
+    }
+
+    const checkDateInterval = (user: IUser) => isWithinInterval(user.dataCadastro, {
+      start: startDate,
+      end: endDate
+    });
+
+    const filteredList = usersList.filter(checkDateInterval);
     
-    let filteredList: IUser[] = usersList;
-
-    if(START_DATE_TYPPED) {
-      filteredList = filteredList.filter((user) => new Date(user.dataCadastro) >= startDate);
-    }
-
-    if(END_DATE_TYPPED) {
-      filteredList = filteredList.filter((user) => new Date(user.dataCadastro) <= endDate);
-    }
-
     return filteredList;
   }
 
