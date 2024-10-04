@@ -1,6 +1,5 @@
-import { Component, EventEmitter, Output } from '@angular/core';
+import { Component, EventEmitter, Input, Output } from '@angular/core';
 import { IUser } from '../../interfaces/user/user.interface';
-import { UsersList } from '../../data/users-list';
 
 @Component({
   selector: 'app-users-list',
@@ -8,9 +7,11 @@ import { UsersList } from '../../data/users-list';
   styleUrl: './users-list.component.scss'
 })
 export class UsersListComponent {
-  usersList: IUser[] = UsersList;
   displayedColumns = ['nome', 'dataCadastro', 'ativo'];
-  
+
+  @Input({ required: true })
+  usersList: IUser[] = [];
+
   @Output('userSelected')
   userSelectedEmitt = new EventEmitter<IUser>();
 
