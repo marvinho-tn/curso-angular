@@ -8,8 +8,10 @@ import { IUser } from './interfaces/user/user.interface';
 })
 export class AppComponent {
   userSelected: IUser = { } as IUser;
+  showUserDetails: boolean = false;
   
   selectUser(user: IUser) {
     this.userSelected = user;
+    this.showUserDetails = true;
   }
 }
