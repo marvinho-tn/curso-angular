@@ -253,5 +253,120 @@ export const UsersList: IUser[] = [
             assinaturaAtiva: true,
             ultimoAcesso: "2024-09-02T14:15:00.000Z"
         }
-    }
+    },
+    {
+        nome: "Bruno Costa",
+        email: "bruno.costa@example.com",
+        senha: "1234567890",
+        idade: "29",
+        endereco: {
+            rua: "Rua das Palmeiras",
+            numero: -0,
+            cidade: "Rio de Janeiro",
+            estado: "RJ",
+            pais: "Brasil"
+        },
+        telefone: "21987654321",
+        ativo: false,
+        funcao: "Desenvolvedor",
+        dataCadastro: "2024-09-10T10:30:00.000Z",
+        status: {
+            online: true,
+            verificado: false,
+            assinaturaAtiva: true,
+            ultimoAcesso: "2024-09-10T10:30:00.000Z"
+        }
+    },
+    {
+        nome: "Carla Mendes",
+        email: "carla.mendes@example.com",
+        senha: "senhaIncorreta",
+        idade: "25",
+        endereco: {
+            rua: "Avenida do Comércio",
+            numero: 1000,
+            cidade: "",
+            estado: "BA",
+            pais: "Brasil"
+        },
+        telefone: "71987654321",
+        ativo: true,
+        funcao: "",
+        dataCadastro: "2024-09-11T10:30:00.000Z",
+        status: {
+            online: false,
+            verificado: true,
+            assinaturaAtiva: false,
+            ultimoAcesso: "2024-09-09T10:30:00.000Z"
+        }
+    },
+    {
+        nome: "Daniela Souza",
+        email: "daniela.souza@example.com",
+        senha: "senhaSegura123",
+        idade: "31",
+        endereco: {
+            rua: "Rua da Alegria",
+            numero: 500,
+            cidade: "Curitiba",
+            estado: "PR",
+            pais: ""
+        },
+        telefone: "41987654321",
+        ativo: true,
+        funcao: "Gerente de Projetos",
+        dataCadastro: "2024-09-12T10:30:00.000Z",
+        status: {
+            online: true,
+            verificado: true,
+            assinaturaAtiva: false,
+            ultimoAcesso: ""
+        }
+    },
+    {
+        nome: "Eduardo Lima",
+        email: "eduardo.lima@example.com",
+        senha: "",
+        idade: "27",
+        endereco: {
+            rua: "Rua dos Bandeirantes",
+            numero: 750,
+            cidade: "Fortaleza",
+            estado: "CE",
+            pais: "Brasil"
+        },
+        telefone: "85987654321",
+        ativo: true,
+        funcao: "Analista de Sistemas",
+        dataCadastro: "2024-09-13T10:30:00.000Z",
+        status: {
+            online: false,
+            verificado: true,
+            assinaturaAtiva: true,
+            ultimoAcesso: "2024-09-12T10:30:00.000Z"
+        }
+    },
+    {
+        nome: "Fernanda Oliveira",
+        email: "fernanda.oliveira@example.com",
+        senha: "mypassword",
+        idade: "22",
+        endereco: {
+            rua: "Avenida Central",
+            numero: 250,
+            cidade: "Belo Horizonte",
+            estado: "MG",
+            pais: "Brasil"
+        },
+        telefone: "31987654321",
+        ativo: true,
+        funcao: "Estagiária",
+        dataCadastro: "2024-09-14T10:30:00.000Z",
+        status: {
+            online: true,
+            verificado: true,
+            assinaturaAtiva: false,
+            ultimoAcesso: "dataErrada"
+        }
+    },
 ];
