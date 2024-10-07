@@ -11,5 +11,19 @@
 ==============================================
 
 <p>
-    <button disabled class="classe">Meu botão</button>
+    <!-- Atributo disabled do HTML 
+     (não é preciso passar um valor,
+     a presença do atributo já indica que vai estar desabilitado) -->
+    <button disabled>Meu botão (Desabilitado com disabled)</button>
+
+    <!-- Atributo disabled do HTML sendo acessado via attribute binding 
+     (é preciso passar um valor mas o valor nao altera o fator de que sempre vai estar desabilitado) -->
+    <button [attr.disabled]="false">Meu botão (Desabilitado com attribute binding)</button>
+
+    <!-- Atributo disabled do HTML sendo acessado via property binding 
+     (é preciso passar um valor booleano que vai definir se está desabilitado ou nao)-->
+    <button [disabled]="true">Meu botão (Desabilitado com property binding)</button>
+
+    <!-- Atributo disabled do HTML sendo acessado via diretiva -->
+    <button appDisabled>Meu botão (Desabilitado com diretiva)</button>
 </p>
