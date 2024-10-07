@@ -3,7 +3,7 @@
   "version": 1,
   "newProjectRoot": "projects",
   "projects": {
-    "template_variable": {
+    "template_variable_children": {
       "projectType": "application",
       "schematics": {
         "@schematics/angular:component": {
@@ -24,7 +24,7 @@
         "build": {
           "builder": "@angular-devkit/build-angular:application",
           "options": {
-            "outputPath": "dist/template_variable",
+            "outputPath": "dist/template_variable_children",
             "index": "src/index.html",
             "browser": "src/main.ts",
             "polyfills": [
@@ -69,10 +69,10 @@
           "builder": "@angular-devkit/build-angular:dev-server",
           "configurations": {
             "production": {
-              "buildTarget": "template_variable:build:production"
+              "buildTarget": "template_variable_children:build:production"
             },
             "development": {
-              "buildTarget": "template_variable:build:development"
+              "buildTarget": "template_variable_children:build:development"
             }
           },
           "defaultConfiguration": "development"
@@ -80,7 +80,7 @@
         "extract-i18n": {
           "builder": "@angular-devkit/build-angular:extract-i18n",
           "options": {
-            "buildTarget": "template_variable:build"
+            "buildTarget": "template_variable_children:build"
           }
         },
         "test": {
