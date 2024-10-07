@@ -1,3 +1,11 @@
 <button 
   #meuButton
-  *ngFor="let btn of buttonsList">{{ btn }}</button>
+  class="btn-{{ i }}"
+  *ngFor="let btn of buttonsList; let i = index;"
+  (click)="changeColor($event)">{{ btn }}</button>
+
+  <button (click)="resetButtons()">Resetar</button>
+
+  <button (click)="first()">Pegar Primeiro</button>
+
+  <button (click)="remove()">Remover Item</button>
