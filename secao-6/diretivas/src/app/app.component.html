@@ -36,9 +36,21 @@
 
 <p [attr.style]="'background-color: orange; color: white;'">Parágrafo com attribute binding</p>
 
-<p [ngStyle]="{ 
-    'background-color': 'orange', 
-    'color': 'white' 
-}">Parágrafo com ngStyle</p>
-
 <p appStyle>Parágrafo com diretiva</p>
+
+=============================================
+
+<p class="meu-texto meu-size">Parágrafo com classe normal</p>
+
+<p [className]="'meu-texto'">Parágrafo com property binding (className)</p>
+
+<p [class]="'meu-texto meu-size'">Parágrafo com property binding (class)</p>
+
+<p [class]="{
+    'meu-texto': true,
+    'meu-size': true,
+}">Parágrafo com property binding (class com objeto)</p>
+
+<p [attr.class]="'meu-texto meu-size'">Parágrafo com attribute binding</p>
+
+<p appClass>Parágrafo com diretiva</p>
