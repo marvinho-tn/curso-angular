@@ -8,5 +8,5 @@ export class DisabledDirective {
     // attrDisabled: boolean = true;
     
     @HostBinding('disabled')
-    propDisabled: boolean = false;
+    propDisabled: boolean = true;
 }

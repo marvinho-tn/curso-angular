@@ -27,3 +27,18 @@
     <!-- Atributo disabled do HTML sendo acessado via diretiva -->
     <button appDisabled>Meu botão (Desabilitado com diretiva)</button>
 </p>
+
+=============================================
+
+<p style="background-color: orange; color: white;">Parágrafo normal</p>
+
+<p [style]="'background-color: orange; color: white;'">Parágrafo com property binding</p>
+
+<p [attr.style]="'background-color: orange; color: white;'">Parágrafo com attribute binding</p>
+
+<p [ngStyle]="{ 
+    'background-color': 'orange', 
+    'color': 'white' 
+}">Parágrafo com ngStyle</p>
+
+<p appStyle>Parágrafo com diretiva</p>
