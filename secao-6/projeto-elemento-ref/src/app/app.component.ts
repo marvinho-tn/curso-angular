@@ -6,34 +6,34 @@ import { AfterViewInit, Component, ElementRef, OnInit, ViewChild } from '@angula
   styleUrl: './app.component.scss'
 })
 export class AppComponent implements AfterViewInit, OnInit {
-  @ViewChild('minhaDiv')
-  divElement!: ElementRef<HTMLDivElement>;
+  // @ViewChild('minhaDiv')
+  // divElement!: ElementRef<HTMLDivElement>;
   
-  constructor(private readonly _elRef: ElementRef<HTMLElement>) { }
+  // constructor(private readonly _elRef: ElementRef<HTMLElement>) { }
 
   ngOnInit() {
-    console.log(this._elRef);
+    // console.log(this._elRef);
 
-    const minhaDiv = this._elRef.nativeElement.querySelector("#minha-outra-div") as HTMLDivElement;
+    // const minhaDiv = this._elRef.nativeElement.querySelector("#minha-outra-div") as HTMLDivElement;
 
-    minhaDiv.style.backgroundColor = 'blue';
-    minhaDiv.textContent = 'Minha outra div encontrada!';
-    minhaDiv.classList.add('minha-classe');
-    minhaDiv.addEventListener('click', () => { console.log('clicou') });
+    // minhaDiv.style.backgroundColor = 'blue';
+    // minhaDiv.textContent = 'Minha outra div encontrada!';
+    // minhaDiv.classList.add('minha-classe');
+    // minhaDiv.addEventListener('click', () => { console.log('clicou') });
   }
 
   ngAfterViewInit() {
-    this.divElement.nativeElement.style.backgroundColor = 'orange';
-    this.divElement.nativeElement.textContent = 'Minha div orange';
-    this.divElement.nativeElement.classList.add('minha-classe');
+    // this.divElement.nativeElement.style.backgroundColor = 'orange';
+    // this.divElement.nativeElement.textContent = 'Minha div orange';
+    // this.divElement.nativeElement.classList.add('minha-classe');
   }
 
   createElement() {
-    const novaDiv = document.createElement('div');
+    // const novaDiv = document.createElement('div');
 
-    novaDiv.textContent = 'Sou a nova div';
-    novaDiv.classList.add('bg-red');
+    // novaDiv.textContent = 'Sou a nova div';
+    // novaDiv.classList.add('bg-red');
 
-    this._elRef.nativeElement.appendChild(novaDiv);
+    // this._elRef.nativeElement.appendChild(novaDiv);
   }
 }
