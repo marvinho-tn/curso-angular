@@ -13,17 +13,18 @@ export class AppComponent implements AfterViewInit, OnInit {
 
   ngOnInit() {
     console.log(this._elRef);
-  }
-
-  ngAfterViewInit() {
-    this.divElement.nativeElement.style.backgroundColor = 'orange';
-    this.divElement.nativeElement.textContent = 'Minha div orange';
-    this.divElement.nativeElement.classList.add('minha-classe');
 
     const minhaDiv = this._elRef.nativeElement.querySelector("#minha-outra-div") as HTMLDivElement;
 
     minhaDiv.style.backgroundColor = 'blue';
     minhaDiv.textContent = 'Minha outra div encontrada!';
     minhaDiv.classList.add('minha-classe');
+    minhaDiv.addEventListener('click', () => { console.log('clicou') });
+  }
+
+  ngAfterViewInit() {
+    this.divElement.nativeElement.style.backgroundColor = 'orange';
+    this.divElement.nativeElement.textContent = 'Minha div orange';
+    this.divElement.nativeElement.classList.add('minha-classe');
   }
 }
