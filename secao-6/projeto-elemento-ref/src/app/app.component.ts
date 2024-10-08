@@ -1,4 +1,5 @@
 import { AfterViewInit, Component, ElementRef, OnInit, ViewChild } from '@angular/core';
+import { TesteService } from './services/teste.service';
 
 @Component({
   selector: 'app-root',
@@ -9,7 +10,10 @@ export class AppComponent implements AfterViewInit, OnInit {
   // @ViewChild('minhaDiv')
   // divElement!: ElementRef<HTMLDivElement>;
   
-  // constructor(private readonly _elRef: ElementRef<HTMLElement>) { }
+  constructor(
+    private readonly _elRef: ElementRef<HTMLElement>,
+    private readonly _testeService: TesteService
+  ) { }
 
   ngOnInit() {
     // console.log(this._elRef);
@@ -29,11 +33,6 @@ export class AppComponent implements AfterViewInit, OnInit {
   }
 
   createElement() {
-    // const novaDiv = document.createElement('div');
-
-    // novaDiv.textContent = 'Sou a nova div';
-    // novaDiv.classList.add('bg-red');
-
-    // this._elRef.nativeElement.appendChild(novaDiv);
+    this._testeService.create(this._elRef.nativeElement);
   }
 }
